@@ -1,0 +1,134 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>PROCount - Simple, Responsive Countdown Landing Page</title>
+	
+	<meta name="description" content="Thank you for purchasing PROCount. In this documentation you will find details on how to customize the template for your needs. It's fairly simple actually, template contains Countdown Clock which requires jQuery. Also, you will find LESS file that I used to code this beautiful template, its simple and very easy to read.">
+	<meta name="author" content="Sonny T.">
+	<meta name="copyright" content="Sonny T.">
+	<meta name="generator" content="Documenter v1.6 http://rxa.li/documenter">
+	<meta name="date" content="2012-12-01T18:44:56+01:00">
+	
+	<link rel="stylesheet" href="css/documenter_style.css" media="all">
+	
+	
+	<script src="js/jquery.1.6.4.js"></script>
+	
+	<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	
+	<link rel="stylesheet" href="css/shDocumenter.css" media="screen">
+	<script src="js/shCore.js"></script>
+	<script src="js/shBrushJScript.js"></script>
+	<script src="js/shBrushPhp.js"></script>
+	<script>SyntaxHighlighter.defaults['toolbar'] = false;SyntaxHighlighter.all();</script>
+
+	<script>document.createElement('section');var duration=500,easing='easeInExpo';</script>
+	<script src="js/script.js"></script>
+	
+	<style>
+		html{background-color:#FFFFFF;color:#383838;}
+		::-moz-selection{background:#444444;color:#DDDDDD;}
+		::selection{background:#444444;color:#DDDDDD;}
+		#documenter_sidebar #documenter_logo{background-image:url();}
+		a{color:#0000FF;}
+		hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ol a{background-color:#DDDDDD;color:#222222;}
+		#documenter_sidebar ol a{-webkit-text-shadow:1px 1px 0px #EEEEEE;-moz-text-shadow:1px 1px 0px #EEEEEE;text-shadow:1px 1px 0px #EEEEEE;}
+		#documenter_sidebar ol{border-top:1px solid #AAAAAA;}
+		#documenter_sidebar ol a{border-top:1px solid #EEEEEE;border-bottom:1px solid #AAAAAA;color:#444444;}
+		#documenter_sidebar ol a:hover{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_sidebar ol a.current{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body>
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ol id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+			<li><a href="#assets">Assets</a></li>
+			<li><a href="#countdown_plugin">Countdown Plugin</a></li>
+			<li><a href="#subscription_box">Subscription Box</a></li>
+			<li><a href="#questions_and_support">Questions and Support</a></li>
+
+		</ol>
+		<div id="documenter_copyright">Copyright Sonny T. 2013<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v1.6</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover"><h1>PROCount</h1><h2>Simple, Responsive Countdown Landing Page</h2><hr><ul><li>Created: 11/29/2012</li><li>By: Sonny T.</li><li><a href=""></a></li><li>Email: <a href="mailto:&#104;&#105;&#64;&#115;&#111;&#110;&#110;&#121;&#116;&#46;&#99;&#111;&#109;">&#104;&#105;&#64;&#115;&#111;&#110;&#110;&#121;&#116;&#46;&#99;&#111;&#109;</a></li></ul><p>Thank you for purchasing PROCount. In this documentation you will find details on how to customize the template for your needs. It's fairly simple actually, template contains Countdown Clock which requires jQuery. Also, you will find LESS file that I used to code this beautiful template, its simple and very easy to read.</p></section>
+<section id="assets">
+	<h3>Assets</h3><hr class="notop">
+<p>
+	Here are the description of the files and folders you find inside of an <em>/assets</em> directory;</p>
+<p>
+	<strong>/javascript/main.js</strong> - The main Javascript file that triggers Countdown and Subscription functions.</p>
+<p>
+	<strong>/stylesheet/style.less</strong> - This is a LESS formatted CSS StyleSheet, it is neat and easy to read. It&#39;s recommend you use LESS file and compress it into style.css. You can use free compressor tools like, <a href="http://wearekiss.com/simpless" title="SimpLESS">SimpLESS</a>.</p>
+</section>
+<section id="countdown_plugin">
+	<h3>Countdown Plugin</h3><hr class="notop">
+<p>
+	The countdown for demo sake comes with&nbsp;<em>futureDate</em> function which adds +60 days to current date, so you can remove the function.</p>
+<p>
+	To change the countdown clock open up a <strong>/assets/javascript/main.js</strong> file and go down to <em>line 19:</em></p>
+<pre class="brush: js; first-line: 19">
+date: futureDate()+&#39; 12:00:00&#39;, // CHANGE THE DATE
+</pre>
+<p>
+	Your date has to be in a format below:</p>
+<pre>
+MM/DD/YYYY HH:MM:SS</pre>
+<p>
+	Here is an example:</p>
+<pre class="brush: js; first-line: 19">
+date: &#39;12/24/2012 12:00:00&#39;,
+</pre>
+
+<p>
+	You also need to set your UTC offset. You can find your UTC offset <a href="http://www.timeanddate.com/library/abbreviations/timezones/" target="_blank" />here</a>. Currently the offset is set to NYC -4 UTC.
+<pre class="brush: js; first-line: 20">
+offset: -4 // CHANGE UTC OFFSET
+</pre>
+</p>
+</section>
+<section id="subscription_box">
+	<h3>Subscription Box</h3><hr class="notop">
+	<p>Subscription box is integrated with MailChimp. To get the form running, you just need your MailChimp API Key and List ID.</p>
+	<p>To get your API Key, click <a href="https://us4.admin.mailchimp.com/account/api/" target="_blank">here</a>. <br />
+	   To get your List ID, click <a href="http://kb.mailchimp.com/article/how-can-i-find-my-list-id" target="_blank">here</a>.</p>
+
+	  <p> After you get your List ID and API Key, go to <strong>/assets/email/mailchimp.php</strong> and change the <em>lines 2 & 3.</em></p>
+	<pre class="brush: php;  first-line: 2">
+	$apiKey = '55977b64122d41058d1edaf8326d0ff9-us4'; // Input your Mailchimp API Key
+	$listId = 'e83a30cc73'; // Input your List ID
+</pre>
+</section>
+<section id="questions_and_support">
+	<h3>Questions and Support</h3><hr class="notop">
+<p>
+	If you need help with the theme or have some questions, feel free to contact me at;</p>
+<ul>
+	<li>
+		Website: www.sonnyt.com</li>
+	<li>
+		Twitter: @sonnyt</li>
+	<li>
+		Email: &#104;&#105;&#64;&#115;&#111;&#110;&#110;&#121;&#116;&#46;&#99;&#111;&#109;</li>
+</ul>
+<p>
+	Or just leave a comment on Themeforest.com</p>
+</section>
+
+	</div>
+</body>
+</html>
