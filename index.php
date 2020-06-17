@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>PROCount</title>
+        <title>TERA BRAND</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <link href="assets/stylesheet/style.css" rel="stylesheet" type="text/css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <?php 
+        require_once "bat/phpmailer/PHPMailerAutoload.php";
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $email = $_POST["email"];
+            // ALRIGHT
+            $mail = new PHPMailer;
+             // from email addreess and name
+             $mail->From = "$email";
+             $mail->FromName = "$fn";
+             // to adress and name
+             $mail->addAddress("contactus@thisistera.com", "CLIENT");
+             // reply address
+             //Address to which recipient will reply
+             // progressive html images
+             $mail->addReplyTo("contactus@thisistera.com", "Reply");
+$mail->isHTML(true);
+$mail->Subject = "PLAN ORDER";
+$mail->Body = "A Client Contacted <br/>
+<p>Email: $email</p>
+<p>A client submitted mail!</p>
+";
+$mail->AltBody = "This is the plain text version of the email content";
+// mail system
+if(!$mail->send()) 
+{
+    echo "Mailer Error: " . $mail->ErrorInfo;
+} else
+{
+    echo "Message has been sent successfully";
+}
+
+        }
+        ?>
         <!--[if IE]>
             <style type="text/css">
                 div.subscribe, div.timeblock {
@@ -36,7 +69,6 @@
                     <img src="assets/images/brand.png" height="20%" width="20%" alt="">
                     <!-- <a href="#" title="PROCount"><strong>TERA</strong>BYTE</a> -->
                 </div>
-                
                 <h3>NEW SITE IN PROGRESS, COOKING SOMETHING WITH PINZA STUDIO.</h3>
                 <p><strong>Kindly</strong> Wait for the Stunning Future</p>
             </div>
@@ -69,9 +101,9 @@
             </div>
             <div class="container">
                 <div class="subscribe nine columns">
-                    <form id="subscribe" action="mailchimp.php" class="clearfix">
+                    <form id="subscribe" method="POST" class="clearfix">
                         <div class="input six alpha columns"><input type="text" name="email" placeholder="Enter your email" /></div>
-                        <button class="three btn omega alpha columns">Subscribe</button>
+                        <button type="submit" class="three btn omega alpha columns">Subscribe</button>
                         <div class="error_alert">Oops! There was a error!</div>
                     </form>
                 </div>

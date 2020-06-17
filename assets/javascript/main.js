@@ -33,30 +33,30 @@ $(document).ready(function () {
                 error = 1;
             }
         });
-
+        $.ajax({
+            url: 'assets/email/'+action,
+            type: 'POST',
+            data: {
+                name:  $('#subscribe input[name="name"]').val(),
+                email: $('#subscribe input[name="email"]').val()
+            },
+            success: function(data){
+                $('#subscribe').html("<span>Got it, you've been added to our email list.</span>");
+            },
+            error: function() {
+                $('.error_alert').fadeIn(function() {
+                    $(this).delay(1000).fadeOut();
+                });
+            }
+        });
         if(error == 1) {
             $('.error_alert').fadeIn(function() {
                 $(this).delay(1000).fadeOut();
+                $('#subscribe').html("<span>Got it, you've been added to our email list.</span>");
             });
         } else {
             var action = $('#subscribe').attr('action');
-
-            $.ajax({
-                url: 'assets/email/'+action,
-                type: 'POST',
-                data: {
-                    name:  $('#subscribe input[name="name"]').val(),
-                    email: $('#subscribe input[name="email"]').val()
-                },
-                success: function(data){
-                    $('#subscribe').html("<span>Got it, you've been added to our email list.</span>");
-                },
-                error: function() {
-                    $('.error_alert').fadeIn(function() {
-                        $(this).delay(1000).fadeOut();
-                    });
-                }
-            });
+            $('#subscribe').html("<span>Got it, you've been added to our email list.</span>");
         }
     });
 });
