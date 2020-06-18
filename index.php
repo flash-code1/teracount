@@ -69,7 +69,7 @@ if(!$mail->send())
                     <img src="assets/images/brand.png" height="20%" width="20%" alt="">
                     <!-- <a href="#" title="PROCount"><strong>TERA</strong>BYTE</a> -->
                 </div>
-                <h3>NEW SITE IN PROGRESS, COOKING SOMETHING WITH PINZA STUDIO.</h3>
+                <h3>DEVELOPMENT IN PROGRESS, COOKING SOMETHING WITH PINZA STUDIO.</h3>
                 <p><strong>Kindly</strong> Wait for the Stunning Future</p>
             </div>
             <div class="timeblock clearfix">

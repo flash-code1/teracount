@@ -5,9 +5,9 @@ $(document).ready(function () {
         var futureDate = new Date();
         futureDate.setDate(futureDate.getDate() + 75); 
 
-        dd = futureDate.getDate();
-        mm = futureDate.getMonth() + 1;
-        y = futureDate.getFullYear();
+        dd = '2'
+        mm = '9'
+        y = '2020'
 
         futureFormattedDate = mm + '/'+ dd + '/'+ y;
 
