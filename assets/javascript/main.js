@@ -3,7 +3,7 @@ $(document).ready(function () {
     // You can delete this function, it's only used for demo purposes to get a future date
     function futureDate() {
         var futureDate = new Date();
-        futureDate.setDate(futureDate.getDate() + 77); 
+        futureDate.setDate(futureDate.getDate() + 75); 
 
         dd = futureDate.getDate();
         mm = futureDate.getMonth() + 1;
