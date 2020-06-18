@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>TERA BRAND</title>
+        <title>THE TERA BRAND</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -124,7 +124,7 @@ if(!$mail->send())
                         <span>Contact Us</span>
                     </div>
                 </div>
-                <p class="copyright">Copyright © 2020 TERA BYTE.</p>
+                <p class="copyright">Copyright © 2020 TERABYTE.</p>
             </div>
         </div>
         <script type="text/javascript" src="assets/javascript/lib/jquery-1.8.3.min.js"></script>
